@@ -11,11 +11,21 @@ var rm = {};
 
 /**
  * Display a popup/tooltip thing for words in the page.
+ * 
+ * Usage example:
+ *   <<Include script>>
+ *   var g = new rm.PopupGlossary();
+ *   g.addTerm("dog", "man's best friend");
+ *   g.search();
+ * 
+ * 
  */
 rm.PopupGlossary = function() {
     /**
      * Only highlight and display a definition for the first
      * occurrence of a term in the page.
+     * @type {boolean}
+     * @private
      */
     this.firstOccurOnly_ = true;
 
